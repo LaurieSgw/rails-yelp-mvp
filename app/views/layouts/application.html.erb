@@ -12,6 +12,9 @@
   </head>
 
   <body>
+    <% unless (params[:controller] == "restaurants" && params[:action] == "index") %>
+      <%= link_to "Go back to all restaurants",  restaurants_path, class: "btn container justify-content w-50%" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
